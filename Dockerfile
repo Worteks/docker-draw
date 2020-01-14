@@ -3,18 +3,18 @@ FROM tomcat:9-jre11-slim
 # Draw.io image for OpenShift Origin
 
 LABEL io.k8s.description="Draw.io is a Java based diagram solution." \
-      io.k8s.display-name="Draw.io 12.4.5" \
+      io.k8s.display-name="Draw.io 12.5.2" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="diagram,draw,drawio,drawio1245" \
+      io.openshift.tags="diagram,draw,drawio,drawio1252" \
       io.openshift.non-scalable="false" \
       help="For more information visit https://github.com/Worteks/docker-draw" \
       maintainer="Thibaut DEMARET <thidem@worteks.com>, Samuel MARTIN MORO <sammar@worteks.com>" \
-      version="12.4.5"
+      version="12.5.2"
 
 ENV DEBIAN_FRONTEND=noninteractive \
     DI=https://github.com/Yelp/dumb-init/releases/download/ \
     DUMBINITVERSION=1.2.2 \
-    VERSION=12.4.5
+    VERSION=12.5.2
 
 COPY config/* /
 RUN echo "# Install Dumb-init" \
